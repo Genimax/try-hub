@@ -1,0 +1,71 @@
+#footer {
+  color: white;
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  width: 100vw;
+  justify-content: space-between;
+  align-items: end;
+}
+
+#credits {
+  padding-left: 10px;
+  font-size: 18px;
+  font-weight: 300;
+
+  text-align: center;
+  height: 28px;
+  color: #616161;
+}
+
+.partner-block {
+  text-align: right;
+  color: #616161;
+  width: 220px;
+  font-size: 18px;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  height: 31px;
+  margin-bottom: 10px;
+  margin-right: 10px;
+}
+
+.partner-nickname {
+  display: block;
+  font-weight: 700;
+}
+
+#partner_icon {
+  width: 40px;
+  height: 40px;
+  padding-left: 10px;
+}
+
+.lang-button {
+  font-size: 24px;
+  background-color: black;
+  color: white;
+  font-weight: 700;
+  border-style: none;
+  border-radius: 7px;
+  cursor: pointer;
+  transition: background-color 0.2s ease-out, color 0.2s ease-in-out;
+}
+
+.lang-buttons {
+  margin-bottom: 10px;
+  width: 95px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.lang-button:hover {
+  background-color: rgb(146, 226, 255);
+  color: black;
+}
+
+.lang-button.active {
+  background-color: #fe9800;
+  color: black;
+}
