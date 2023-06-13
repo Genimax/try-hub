@@ -1,0 +1,62 @@
+@import "./variables.scss";
+@import "./clear.scss";
+@import "./footer.scss";
+@import "./langButtons.scss";
+@import "./header.scss";
+@import "./animations.scss";
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+html {
+  background: $black;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+}
+
+.button {
+  padding-right: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 220px;
+  max-width: 500px;
+  height: 47px;
+  background-color: $yellow;
+  border-radius: 11px;
+  color: $black;
+  font-size: 18px;
+  font-weight: 700;
+  border-style: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease-out, color 0.3s ease-out;
+
+  img {
+    width: 25px;
+    height: 25px;
+    border-radius: 25px;
+    margin: 0 10px;
+  }
+
+  p {
+    overflow: hidden;
+  }
+}
+
+.button:hover {
+  background-color: $blue;
+}
+
+.button:active {
+  background-color: $dark-grey;
+  color: $yellow;
+}
+
+.play-btn {
+  align-self: center;
+}

@@ -1,0 +1,27 @@
+.lang-button {
+  font-size: 24px;
+  background-color: $black;
+  color: white;
+  font-weight: 700;
+  border-style: none;
+  border-radius: 7px;
+  cursor: pointer;
+  transition: background-color 0.2s ease-out, color 0.2s ease-in-out;
+}
+
+.lang-buttons {
+  margin-bottom: 10px;
+  width: 95px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.lang-button:hover {
+  background-color: $blue;
+  color: $black;
+}
+
+.lang-button.active {
+  background-color: $yellow;
+  color: $black;
+}

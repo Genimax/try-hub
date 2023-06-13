@@ -11,16 +11,15 @@
 #credits {
   padding-left: 10px;
   font-size: 18px;
-  font-weight: 300;
-
+  font-weight: 500;
   text-align: center;
   height: 28px;
-  color: #616161;
+  color: $grey;
 }
 
 .partner-block {
   text-align: right;
-  color: #616161;
+  color: $grey;
   width: 220px;
   font-size: 18px;
   display: flex;
@@ -40,32 +39,4 @@
   width: 40px;
   height: 40px;
   padding-left: 10px;
-}
-
-.lang-button {
-  font-size: 24px;
-  background-color: black;
-  color: white;
-  font-weight: 700;
-  border-style: none;
-  border-radius: 7px;
-  cursor: pointer;
-  transition: background-color 0.2s ease-out, color 0.2s ease-in-out;
-}
-
-.lang-buttons {
-  margin-bottom: 10px;
-  width: 95px;
-  display: flex;
-  justify-content: space-between;
-}
-
-.lang-button:hover {
-  background-color: rgb(146, 226, 255);
-  color: black;
-}
-
-.lang-button.active {
-  background-color: #fe9800;
-  color: black;
 }
