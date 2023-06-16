@@ -1,14 +1,12 @@
-import { useTranslation } from "react-i18next";
-
-import LangButtons from "../smart/LangButtons";
+import useFooter from "../../hooks/components/useFooter";
 
 const Footer = () => {
-  const { t } = useTranslation();
+  const { t, langButtonsRender } = useFooter();
 
   return (
     <div id="footer">
       <p id="credits">developed by GeniusOoO</p>
-      <LangButtons />
+      {langButtonsRender()}
       <a
         href="https://twitch.com/igorstankevich"
         target="_blank"

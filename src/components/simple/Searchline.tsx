@@ -1,47 +1,15 @@
-import { useCallback, useState } from "react";
-import { useTranslation } from "react-i18next";
-import { IStreamer } from "../../models/IStreamer";
+import useSearchline from "../../hooks/components/useSearchline";
 
 export const Searchline = () => {
-  const { t } = useTranslation();
-  const [loading, setLoading] = useState(false);
-  const [selected, setSelected] = useState<IStreamer>({
-    found: false,
-  });
-  const [input, setInput] = useState("");
-
-  let timeout: ReturnType<typeof setTimeout> | undefined;
-  const handleChange = (value: string) => {
-    // Clearing states
-    clearTimeout(timeout);
-    setSelected({ found: false });
-    setLoading(false);
-
-    // Setting states
-    timeout = setTimeout(async () => {
-      if (value.length > 0) {
-        setLoading(true);
-
-        const response = await fetch(
-          "http://localhost:3000/streamer",
-          {
-            method: "POST",
-            headers: {
-              Accept: "application/json",
-              "Content-Type": "application/json",
-            },
-            body: JSON.stringify({ nickname: value }),
-            mode: "cors",
-          }
-        ).then((res) => res.json());
-
-        setLoading(false);
-        setSelected(response);
-      }
-    }, 500);
-  };
-
-  const memoized = useCallback(handleChange, []);
+  const {
+    t,
+    setInput,
+    memoized,
+    input,
+    loading,
+    selected,
+    buttonRenderer,
+  } = useSearchline();
 
   return (
     <>
@@ -71,17 +39,7 @@ export const Searchline = () => {
         />
       </div>
 
-      {selected.found ? (
-        <button
-          onClick={() => {}}
-          className={`button play-btn${
-            selected.found ? " fade-in" : " hidden"
-          }`}
-        >
-          <img src={selected.icon} alt="icon" />
-          <p>{selected.nickname}</p>
-        </button>
-      ) : null}
+      {buttonRenderer(selected)}
     </>
   );
 };

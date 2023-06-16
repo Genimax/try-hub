@@ -1,9 +1,13 @@
-export const Logo = () => {
-  const classConstructor = () => {
-    // if (found) {
-    //   return " logo-top";
-    // }
+import { useSelector } from "react-redux";
+import { RootState } from "../../store/store";
 
+export const Logo = () => {
+  const streamer = useSelector((state: RootState) => state.streamer);
+
+  const classConstructor = () => {
+    if (streamer.found) {
+      return " logo-top";
+    }
     return "";
   };
 
