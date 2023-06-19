@@ -12,6 +12,15 @@ const useSearchline = () => {
   const [input, setInput] = useState("");
   const { setStreamer } = useActions();
 
+  const onEnter = (event: KeyboardEvent) => {
+    if (selected.found && event.key === "Enter") {
+      setStreamer(selected);
+      window.removeEventListener("keydown", onEnter);
+    }
+  };
+
+  window.addEventListener("keydown", onEnter);
+
   const buttonRenderer = (selected: IStreamer) => {
     if (selected.found) {
       return (
@@ -45,20 +54,17 @@ const useSearchline = () => {
       if (value.length > 0) {
         setLoading(true);
 
-        const response = await fetch(
-          "http://localhost:3000/streamer",
-          {
-            method: "POST",
-            headers: {
-              Accept: "application/json",
-              "Content-Type": "application/json",
-            },
-            body: JSON.stringify({
-              nickname: value.replaceAll(" ", ""),
-            }),
-            mode: "cors",
-          }
-        ).then((res) => res.json());
+        const response = await fetch("http://localhost:3000/streamer", {
+          method: "POST",
+          headers: {
+            Accept: "application/json",
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            nickname: value.replaceAll(" ", ""),
+          }),
+          mode: "cors",
+        }).then((res) => res.json());
 
         setLoading(false);
         setSelected(response);

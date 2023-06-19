@@ -9,7 +9,7 @@ export const Header = () => {
   const headerRender = () => {
     if (streamer.found) {
       return (
-        <header>
+        <header className="fade-in">
           <div className="header-container">
             <Logo />
             <LangButtons />

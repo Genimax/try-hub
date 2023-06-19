@@ -1,5 +1,10 @@
 {
   "credits": "разработано",
   "partner": "Партнёр сервиса:",
-  "search-placeholder": "ваш никнейм на Twitch"
+  "search-placeholder": "ваш никнейм на Twitch",
+  "loading": "Подключение...",
+  "categories-title": "Выберите испытание:",
+  "yes": "да",
+  "no": "нет",
+  "russian-roulette": "Русская Рулетка"
 }

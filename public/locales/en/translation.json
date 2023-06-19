@@ -1,5 +1,10 @@
 {
   "credits": "developed by",
   "partner": "Service Partner:",
-  "search-placeholder": "enter your twitch nickname"
+  "search-placeholder": "enter your twitch nickname",
+  "loading": "Loading...",
+  "categories-title": "Choose your trial:",
+  "yes": "yes",
+  "no": "no",
+  "russian-roulette": "Russian Roulette"
 }
