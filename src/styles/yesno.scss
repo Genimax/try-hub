@@ -1,0 +1,65 @@
+@import "./variables.scss";
+
+.timer {
+  margin-bottom: 30px;
+}
+
+.total-players-container {
+  p {
+    margin-bottom: 10px;
+    color: $grey;
+    font-weight: 700;
+    text-align: center;
+  }
+
+  margin-bottom: 20px;
+}
+
+.question-title {
+  font-weight: 700;
+  font-size: 31px;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.yesno-buttons-container {
+  display: flex;
+  gap: 70px;
+  align-items: center;
+  justify-content: flex-end;
+  margin-bottom: 62px;
+}
+
+.top-3-main-container {
+  p {
+    color: $grey;
+    font-weight: 500;
+    font-size: 18px;
+    text-align: center;
+    margin-bottom: 14px;
+  }
+
+  .top3-places-container {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 30px;
+
+    p {
+      max-width: 200px;
+      overflow: hidden;
+
+      color: white;
+      white-space: nowrap;
+    }
+  }
+}
+
+.button-results {
+  margin-top: 60px;
+  text-transform: none !important;
+  background-color: $blue !important;
+}
+
+.button-results:hover {
+  background-color: yellow !important;
+}

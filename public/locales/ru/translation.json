@@ -6,5 +6,12 @@
   "categories-title": "Выберите испытание:",
   "yes": "да",
   "no": "нет",
-  "russian-roulette": "Русская Рулетка"
+  "russian-roulette": "Русская Рулетка",
+  "yesno-title-1": "Стример задаёт вопрос!",
+  "answer": "Отвечайте",
+  "or": "или",
+  "total-players": "Всего игроков",
+  "question": "Вопрос",
+  "top-3": "Топ-3",
+  "show-results": "Подвести итоги"
 }

@@ -6,5 +6,14 @@
   "categories-title": "Choose your trial:",
   "yes": "yes",
   "no": "no",
-  "russian-roulette": "Russian Roulette"
+  "russian-roulette": "Russian Roulette",
+  "yesno-title-1": "Streamer asks a question!",
+  "answer": "Answer",
+  "or": "or",
+  "total-players": "Active viewers",
+  "question": "Question",
+  "top-3": "Top-3",
+  "show-results": "Summarize"
+
+
 }

@@ -4,10 +4,13 @@ import { RootState } from "../../store/store";
 import { useEffect, useState } from "react";
 import { TwitchConnection } from "../../utils/TwitchConnection";
 import { Categories } from "../simple/Categories";
+import { Category } from "../../models/ICategory";
+import { Yesno } from "../simple/Yesno";
 
 export const Pages = () => {
   const [loading, setLoading] = useState(false);
   const streamer = useSelector((state: RootState) => state.streamer);
+  const category = useSelector((state: RootState) => state.category);
 
   /////////////////////////////////////////
   // Chat Connection //
@@ -29,10 +32,25 @@ export const Pages = () => {
     if (!streamer.found) {
       return null;
     }
+
+    const categoriesRender = () => {
+      if (loading) return null;
+
+      if (category === Category.YESNO) {
+        return <Yesno />;
+      }
+
+      if (category === Category.RUSSIANROULETTE) {
+        return <div>RUSSIANROULETTE</div>;
+      }
+
+      if (!loading && !category) return <Categories />;
+    };
+
     return (
       <>
         <ConnectionLoader loading={loading} />
-        <Categories />
+        {categoriesRender()}
       </>
     );
   };
