@@ -54,7 +54,7 @@ const useSearchline = () => {
       if (value.length > 0) {
         setLoading(true);
 
-        const response = await fetch("http://localhost:3000/streamer", {
+        const response = await fetch(import.meta.env.VITE_CHECK_STREAMER, {
           method: "POST",
           headers: {
             Accept: "application/json",
