@@ -1,5 +1,7 @@
 import useFooter from "../../hooks/components/useFooter";
 
+import partnerLogo from "../../assets/icons/partner.svg";
+
 const Footer = () => {
   const { t, langButtonsRender } = useFooter();
 
@@ -16,11 +18,7 @@ const Footer = () => {
           {t("partner")}
           <span className="partner-nickname">igorstankevich</span>
         </p>
-        <img
-          id="partner_icon"
-          src=".\src\assets\icons\partner.svg"
-          alt="is_icon"
-        />
+        <img id="partner_icon" src={partnerLogo} alt="is_icon" />
       </a>
     </div>
   );
