@@ -1,15 +1,11 @@
 import useSearchline from "../../hooks/components/useSearchline";
 
+import loadPNG from "../../assets/icons/loading.svg";
+import errorPNG from "../../assets/icons/x.svg";
+
 export const Searchline = () => {
-  const {
-    t,
-    setInput,
-    memoized,
-    input,
-    loading,
-    selected,
-    buttonRenderer,
-  } = useSearchline();
+  const { t, setInput, memoized, input, loading, selected, buttonRenderer } =
+    useSearchline();
 
   return (
     <>
@@ -25,16 +21,14 @@ export const Searchline = () => {
         />
         <img
           className={`loading ${loading ? "" : "hidden"}`}
-          src=".\src\assets\icons\loading.svg"
+          src={loadPNG}
           alt="loading"
         />
         <img
           className={`loading error-x ${
-            !loading && !selected.found && selected.nickname
-              ? ""
-              : "hidden"
+            !loading && !selected.found && selected.nickname ? "" : "hidden"
           }`}
-          src=".\src\assets\icons\x.svg"
+          src={errorPNG}
           alt="icon"
         />
       </div>

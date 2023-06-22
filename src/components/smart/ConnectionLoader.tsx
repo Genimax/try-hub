@@ -1,6 +1,8 @@
 import { ILoader } from "../../models/ILoader";
 import { useTranslation } from "react-i18next";
 
+import loadingIMG from "../../assets/icons/loading-main.svg";
+
 export const ConnectionLoader = (props: ILoader) => {
   const { t } = useTranslation();
   const loading = props.loading;
@@ -10,7 +12,7 @@ export const ConnectionLoader = (props: ILoader) => {
       return (
         <div className="loading-container fade-in">
           <p>{t("loading")}</p>
-          <img src=".\src\assets\icons\loading-main.svg" />
+          <img src={loadingIMG} />
         </div>
       );
     }
