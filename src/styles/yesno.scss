@@ -31,6 +31,10 @@
 }
 
 .top-3-main-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
   p {
     color: $grey;
     font-weight: 500;
@@ -41,16 +45,35 @@
 
   .top3-places-container {
     display: flex;
-    gap: 30px;
+    flex-direction: column;
+    gap: 5px;
     margin-bottom: 30px;
 
-    p {
-      max-width: 200px;
-      overflow: hidden;
+    .places-container {
+      display: flex;
+      gap: 30px;
+      align-items: center;
+      justify-content: space-between;
 
-      color: white;
-      white-space: nowrap;
-    }
+      p {
+        max-width: 200px;
+        overflow: hidden;
+        color: white;
+        white-space: nowrap;
+      }
+
+
+
+      .top3-places {
+        width: 30px;
+      }
+
+      .top3-scores {
+        width: 30px;
+        text-align: center;
+      }
+      }
+
   }
 }
 
@@ -62,4 +85,121 @@
 
 .button-results:hover {
   background-color: yellow !important;
+}
+
+.subcolor {
+  color: $yellow;
+}
+
+.results-window {
+  margin-bottom: 40px;
+}
+
+.results-title-container {
+  display: flex;
+  width: 443px;
+  align-items: center;
+  justify-content: space-between;
+  color: $grey;
+  font-weight: 800;
+  font-size: 18px;
+  margin-bottom: 30px;
+  text-align: center;
+
+  p {
+    width: 70px;
+  }
+
+  .nickname-title {
+    width: 200px;
+  }
+}
+
+.overflow-y {
+  position: relative;
+  width: 420px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  min-height: 466px;
+  padding-right: 30px;
+  margin-bottom: 45px;
+  transform: translateX(10px);
+
+
+  .top-container {
+    position: absolute;
+    width: 430px;
+  }
+
+  .stats {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    width: 100%;
+    position: absolute;
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: 600;
+    color: $grey;
+    padding-bottom: 20px;
+
+    p {
+      min-width: 100%;
+      font-size: 16px;
+      font-weight: 700;
+      margin-bottom: 10px;
+      text-align: left;
+    }
+
+  .stats-title {
+    padding-top: 20px;
+    border-top: $grey dashed 2px;
+    font-weight: 600;
+    width: 70%;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  }
+
+  .top-result {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+
+    p {
+      font-size: 18px;
+      font-weight: 500;
+      width: 51px;
+      text-align: center;
+    }
+
+    .nickname {
+      width: 200px;
+      overflow: hidden;
+      word-wrap: unset;
+    }
+  }
+}
+
+.overflow-y::-webkit-scrollbar {
+  position: absolute;
+  width: 5px;
+}
+
+.overflow-y::-webkit-scrollbar-track { // set style to track
+  background : $dark-grey;
+  border-radius: 10px;
+}
+
+.overflow-y::-webkit-scrollbar-thumb { // sets style to thumb
+  background : $grey;
+  border-radius: 10px;
+  box-shadow:  0 0 6px rgba(0, 0, 0, 0.2);
+}
+
+.game-results-buttons  {
+
+  button {
+  text-transform: capitalize !important; }
 }

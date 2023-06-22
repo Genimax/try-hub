@@ -95,6 +95,16 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    button {
+      margin-left: 5px;
+      background-color: transparent;
+      outline: none;
+      border: none;
+      color: $grey;
+      font-size: 18px;
+      cursor: pointer;
+    }
   }
 
   .streamer-icon {

@@ -19,6 +19,7 @@
     "react-i18next": "^12.3.1",
     "react-loader-spinner": "^5.3.4",
     "react-redux": "^8.0.7",
+    "react-tmi": "^1.6.0",
     "tmi.js": "^1.8.5"
   },
   "devDependencies": {

@@ -13,7 +13,14 @@
   "total-players": "Active viewers",
   "question": "Question",
   "top-3": "Top-3",
-  "show-results": "Summarize"
-
-
+  "show-results": "Summarize",
+  "game-results": "Game Results",
+  "place": "Top",
+  "nickname": "Nickname",
+  "scores": "Scores",
+  "stats": "Stats",
+  "fastest-player": "The Fastest Player",
+  "laziest-player": "The Laziest Player",
+  "restart": "Play Again",
+  "change-mode": "Change Trial"
 }

@@ -2,9 +2,11 @@ import { useSelector } from "react-redux";
 import { Logo } from "../simple/Logo";
 import LangButtons from "./LangButtons";
 import { RootState } from "../../store/store";
+import { useActions } from "../../hooks/store/useActions";
 
 export const Header = () => {
   const streamer = useSelector((state: RootState) => state.streamer);
+  const { setStreamer } = useActions();
 
   const headerRender = () => {
     if (streamer.found) {
@@ -21,6 +23,13 @@ export const Header = () => {
               alt="streamer icon"
             />
             <p className="streamer-nickname">{streamer.nickname}</p>
+            <button
+              onClick={() => {
+                location.reload();
+              }}
+            >
+              ✖
+            </button>
           </div>
         </header>
       );

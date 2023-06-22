@@ -13,5 +13,14 @@
   "total-players": "Всего игроков",
   "question": "Вопрос",
   "top-3": "Топ-3",
-  "show-results": "Подвести итоги"
+  "show-results": "Подвести итоги",
+  "game-results": "Результаты игры",
+  "place": "Место",
+  "nickname": "Ник",
+  "scores": "Очки",
+  "stats": "Статистика",
+  "fastest-player": "Самый быстрый игрок",
+  "laziest-player": "Самый ленивый игрок",
+  "restart": "Заново",
+  "change-mode": "Сменить режим"
 }
