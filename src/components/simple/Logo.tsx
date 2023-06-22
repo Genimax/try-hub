@@ -1,7 +1,7 @@
 import { useSelector } from "react-redux";
 import { RootState } from "../../store/store";
 
-import imgLogo from ".srcassetsiconslogo.svg";
+import imgLogo from "./src/assets/icons/logo.svg";
 
 export const Logo = () => {
   const streamer = useSelector((state: RootState) => state.streamer);
