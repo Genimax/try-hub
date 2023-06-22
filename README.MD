@@ -35,6 +35,7 @@ This app is built with the following technologies and availiable on English and 
 - React
 - Redux
 - TypeScript
+- SASS/SCSS
 - tmi.js
 - Vite
 - 18n.js
