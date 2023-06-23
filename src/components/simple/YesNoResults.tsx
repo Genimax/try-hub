@@ -55,8 +55,12 @@ export const YesNoResults = (props: IYesNoActiveProps) => {
             <div className="stats">
               <p className="stats-title">{t("stats")}:</p>
               <div>
-                <p>{t("fastest-player")}:</p>
-                <p>{t("laziest-player")}:</p>
+                <p>
+                  {t("fastest-player")}: {results.fastestPlayer?.username}
+                </p>
+                <p>
+                  {t("laziest-player")}: {results.laziestPlayer?.username}
+                </p>
               </div>
             </div>
           </div>
