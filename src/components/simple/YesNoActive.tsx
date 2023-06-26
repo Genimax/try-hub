@@ -31,10 +31,16 @@ export const YesNoActive = (props: IYesNoActiveProps) => {
         return subscriber ? " subcolor" : "";
       };
 
+      const names: { [key: number]: string } = {
+        0: "Mr. Pink",
+        1: "Mr. White",
+        2: "Mr. Blue",
+      };
+
       return (
         <div key={Object.keys(user)[0]} className={"places-container"}>
           <p className={"top3-places" + classRender()}>{index + 1}</p>
-          <p className={classRender()}>{Object.keys(user)[0]}</p>
+          <p className={classRender()}>*{names[index]}*</p>
           <p className={"top3-scores" + classRender()}>
             {Object.values(user)[0]}
           </p>
