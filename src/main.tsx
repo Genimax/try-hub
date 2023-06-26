@@ -7,12 +7,10 @@ import "./styles/main.scss";
 
 import "./utils/18n.js";
 
-ReactDOM.createRoot(
-  document.getElementById("root") as HTMLElement
-).render(
+ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
   <React.StrictMode>
     <Provider store={store}>
-      <Suspense fallback={<div>Loading...</div>}>
+      <Suspense>
         <App />
       </Suspense>
     </Provider>

@@ -11,6 +11,7 @@ export const Searchline = () => {
     <>
       <div className="search-container">
         <input
+          autoFocus={true}
           onChange={(input) => {
             setInput(input.target.value);
             memoized(input.target.value);
