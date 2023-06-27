@@ -10,6 +10,7 @@ A Twitch chat bot application that enables streamers to play different games wit
 
 ## Features
 
+- Mobile View In DEV Phaze.
 - **Yes / No Game:** Streamers can ask questions, and viewers participate by answering with commands. The app tracks points, allowing participants to compete for the highest score.
 - **Russian Roulette Game (Future Development):** Streamers will be able to pull the trigger, and viewers can spin the drum using commands. (Planned for future development)
 
